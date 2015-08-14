@@ -42,6 +42,11 @@ if [ -f $HOME/.profile ]; then
 fi
 
 # Shell Aliases
+alias c='clear'
+alias l='ls -a'
+alias ll='ls -latr'
+alias t='tree -L 2'
+
 ## Git Aliases
 alias gs='git status '
 alias ga='git add '
@@ -61,6 +66,12 @@ alias vagdestroy='vagrant destroy'
 alias vagssh='vagrant ssh'
 alias vaghalt='vagrant halt'
 
+## Docker Aliases
+alias dps='docker ps'
+alias drq='docker rm $(docker ps -q)'
+alias dri='docker rmi'
+alias dil='docker image ls'
+
 ## Miscellaneous Aliases
 alias htop='sudo htop'
 
@@ -76,3 +87,9 @@ qfind () {
 if [ -f /usr/bin/vim ]; then
   export EDITOR=/usr/bin/vim
 fi
+
+# for go
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=~/Projects/golang/learningGo
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin
